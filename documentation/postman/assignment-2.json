@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "0f9f27e8-787e-49b1-b5e6-7ecb6bd00ee9",
+		"name": "advanced-library-system",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24109494"
+	},
+	"item": [
+		{
+			"name": "members",
+			"item": [
+				{
+					"name": "sign up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"test-name\",\n    \"username\": \"test123\",\n    \"email\": \"test@mail.com\",\n    \"birthDate\": \"2002-09-19\",\n    \"password\": \"lkmldmwded221\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"test-name\",\n    \"username\": \"test123\",\n    \"email\": \"test@mail.com\",\n    \"birthDate\": \"2002-09-19\",\n    \"password\": \"lkmldmwded221\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/signup",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "384"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"180-GAYpOXo0ygIVK3zl6roM0Ho9cyc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 09:24:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"test-name\",\n    \"username\": \"test123\",\n    \"password\": \"$2b$10$P30slyhd1co/UcYzb51FB.5u7lkaJdDGQj8gDj9gWmdnrA/uvt.qW\",\n    \"email\": \"test@mail.com\",\n    \"birthDate\": \"2002-09-19T00:00:00.000Z\",\n    \"subscribedBooks\": [],\n    \"returnRate\": 0,\n    \"numberOfBooksReturnedOnTime\": 0,\n    \"_id\": \"678a21d37d1e8b747f0bb648\",\n    \"borrowedBooks\": [],\n    \"createdAt\": \"2025-01-17T09:24:35.051Z\",\n    \"updatedAt\": \"2025-01-17T09:24:35.051Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "log in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\": \"test@mail.com\",\n    \"password\": \"lkmldmwded221\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Email\": \"test@mail.com\",\n    \"password\": \"lkmldmwded221\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"da-qhbamTBjRnvTiqf0FiSMUmxsS7w\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 09:25:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhhMjFkMzdkMWU4Yjc0N2YwYmI2NDgiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJpYXQiOjE3MzcxMDU5MDcsImV4cCI6MTczNzEwOTUwN30.VeImySt9zYVAFRzhSVHX9yplu1BLGl3wQu9VkCeT6Wg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "borrow book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhhMjFkMzdkMWU4Yjc0N2YwYmI2NDgiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJpYXQiOjE3MzcxNTE3NjcsImV4cCI6MTczNzE1NTM2N30.cDVlavDOziLcq_YuBxKmzs9W5UFmROITjtDSYTt3KhQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookISBN\": \"ISBN 978-1-23-456789-0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/members/borrow-book/678a21d37d1e8b747f0bb648",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"members",
+								"borrow-book",
+								"678a21d37d1e8b747f0bb648"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bookISBN\": \"ISBN 978-1-23-456789-0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/members/borrow-book/678a21d37d1e8b747f0bb648",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"borrow-book",
+										"678a21d37d1e8b747f0bb648"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "261"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"105-7dGamJjcXzmslgqRdQM/vV/Vb7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 10:27:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"book titled : { en: 'The Great Adventure', ar: 'المغامرة العظيمة' }, by author : { en: 'John Doe', ar: 'جون دو' }, has been successfully borrowed, return date : Fri Jan 31 2025 12:27:18 GMT+0200 (Eastern European Standard Time)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "return book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhhMjFkMzdkMWU4Yjc0N2YwYmI2NDgiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJpYXQiOjE3MzcxNTE3NjcsImV4cCI6MTczNzE1NTM2N30.cDVlavDOziLcq_YuBxKmzs9W5UFmROITjtDSYTt3KhQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bookISBN\": \"ISBN 978-1-23-456789-0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/members/return-book/678a21d37d1e8b747f0bb648",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"members",
+								"return-book",
+								"678a21d37d1e8b747f0bb648"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"bookISBN\": \"ISBN 978-1-23-456789-0\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/members/return-book/678a21d37d1e8b747f0bb648",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"return-book",
+										"678a21d37d1e8b747f0bb648"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-Uw0LorFCYNG9qZoDXEmMcjaAZlU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 22:17:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"book with isbn : ISBN 978-1-23-456789-0 has successfully returned by member with id : 678a21d37d1e8b747f0bb648\"\n}"
+						}
+					]
+				},
+				{
+					"name": "subscribe/unsubscribe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NzhhMjFkMzdkMWU4Yjc0N2YwYmI2NDgiLCJ1c2VybmFtZSI6InRlc3QxMjMiLCJpYXQiOjE3MzcxNTE3NjcsImV4cCI6MTczNzE1NTM2N30.cDVlavDOziLcq_YuBxKmzs9W5UFmROITjtDSYTt3KhQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"bookISBN\": \"ISBN 978-1-23-456789-0\",\n\"sub\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/members/subscribe-unsubscribe/678a21d37d1e8b747f0bb648",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"members",
+								"subscribe-unsubscribe",
+								"678a21d37d1e8b747f0bb648"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success-subscribe",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"bookISBN\": \"ISBN 978-1-23-456789-0\",\n\"sub\": true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/members/subscribe-unsubscribe/678a21d37d1e8b747f0bb648",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"subscribe-unsubscribe",
+										"678a21d37d1e8b747f0bb648"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-Wud5xcRQnhcA0sZB4wKeJMf8U2s\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 22:22:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully subscribed to the book\"\n}"
+						},
+						{
+							"name": "success-unsubscribe",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"bookISBN\": \"ISBN 978-1-23-456789-0\",\n\"sub\": false\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/members/subscribe-unsubscribe/678a21d37d1e8b747f0bb648",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"subscribe-unsubscribe",
+										"678a21d37d1e8b747f0bb648"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "53"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35-9CWvQMWYSOZFGSdk0dvi0JzrLjk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 22:22:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully unsubscribed from the book\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get-borrowed-books",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3000/members/borrowed-books/678a21d37d1e8b747f0bb648",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"members",
+										"borrowed-books",
+										"678a21d37d1e8b747f0bb648"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "406"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"196-GtdwVIwYGePjlX4Sfl1xN7gfokg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Jan 2025 23:24:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"borrowedBookId\": \"67716fc1bb736297a0e30dae\",\n        \"title\": {\n            \"en\": \"The Great Adventure\",\n            \"ar\": \"المغامرة العظيمة\"\n        },\n        \"isReturned\": true,\n        \"daysLeft\": null,\n        \"warningFlag\": false,\n        \"expiredFlag\": false\n    },\n    {\n        \"borrowedBookId\": \"67716fc1bb736297a0e30daf\",\n        \"title\": {\n            \"en\": \"Mystery of the Lost Island\",\n            \"ar\": \"لغز الجزيرة المفقودة\"\n        },\n        \"isReturned\": false,\n        \"daysLeft\": 10,\n        \"warningFlag\": false,\n        \"expiredFlag\": false\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
